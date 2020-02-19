@@ -1,0 +1,19 @@
+# cygwin setup list
+
+# database
+mysql
+
+# dev
+git
+make gcc-core gcc-g++ gdb binutils
+
+# net
+curl
+nc nc6
+openssh
+
+# shells
+bash-completion
+
+# utils
+gnupg
