@@ -14,7 +14,7 @@ set STATIC_CMD_PREFIX=R:\runtime-app\
 
 :init_args
 :: check prefix
-set CMD_PREFIX=%dp0:~0,18%
+set CMD_PREFIX=%dp0:~0,15%
 if %STATIC_CMD_PREFIX% neq %CMD_PREFIX% ( goto end )
 cd /d %dp0%
 pushd
