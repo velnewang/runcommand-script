@@ -1,36 +1,42 @@
+:: mklink_runtime_by_current.cmd
 :: mklink runtime by _current
-@ECHO off
-CALL :find_dp0
+@echo off
+call :find_dp0
+
+:start 
+echo --------start
+:: goto end
 
 :config
-SET LINK_PREFIX=R:\
-SET TARGET_NAME=_current
-SET STATIC_CMD_PREFIX=R:\runtime-static\
+set LINK_PREFIX=R:\
+set TARGET_NAME=_current
+set STATIC_CMD_PREFIX=R:\runtime-app\
 
-:start
+:init_args
 :: check prefix
-SET CMD_PREFIX=%dp0:~0,18%
-IF %STATIC_CMD_PREFIX% neq %CMD_PREFIX% ( GOTO end )
-CD /d %dp0%
-PUSHD
-CD ..\
-SET CMD_PARENT=%CD%\
-POPD
-IF %STATIC_CMD_PREFIX% neq %CMD_PARENT% ( GOTO end )
-:: set and check
-FOR %%a IN ( %dp0:\= % ) DO SET LINK_NAME=%%a
-SET LINK_PATH=%LINK_PREFIX%%LINK_NAME%\
-SET TARGET_PATH=%dp0%%TARGET_NAME%\
-IF EXIST %LINK_PATH% ( GOTO end )
-IF NOT EXIST %TARGET_PATH% ( GOTO end )
+set CMD_PREFIX=%dp0:~0,18%
+if %STATIC_CMD_PREFIX% neq %CMD_PREFIX% ( goto end )
+cd /d %dp0%
+pushd
+cd ..\
+set CMD_PARENT=%CD%\
+popd
+if %STATIC_CMD_PREFIX% neq %CMD_PARENT% ( goto end )
+:: get dir name
+for %%a in ( %dp0:\= % ) do set LINK_NAME=%%a
+set LINK_PATH=%LINK_PREFIX%%LINK_NAME%\
+set TARGET_PATH=%dp0%%TARGET_NAME%\
+if exist %LINK_PATH% ( goto end )
+if not exist %TARGET_PATH% ( goto end )
 
-:mklink_d
+:run
 mklink /d %LINK_PATH% %TARGET_PATH%
-GOTO end
+goto end
 
 :end
-ECHO end
+echo --------end
+exit /b
 
 :find_dp0
-SET dp0=%~dp0
-EXIT /b
+set dp0=%~dp0
+exit /b
