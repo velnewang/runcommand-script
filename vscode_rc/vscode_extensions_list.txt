@@ -1,0 +1,6 @@
+# vscode extensions list
+
+HTML Boilerplate
+Prettier - Code Formatter
+shell-format
+TabOut

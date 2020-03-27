@@ -1,0 +1,15 @@
+{
+    "workbench.startupEditor": "none",
+    "files.eol": "\n",
+    "editor.fontFamily": "Source Code Pro, Monaco, Consolas, Hiragino Sans GB, monospace",
+    "editor.fontSize": 14,
+    // "window.restoreWindows": "none",
+    // "git.path": "\\bin\\git.exe",
+    // "window.zoomLevel": 1,
+    // "editor.renderWhitespace": "all",
+    // "terminal.integrated.shell.windows": "\\bin\\bash.exe",
+    "update.mode": "none",
+    "update.enableWindowsBackgroundUpdates": false,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+}
