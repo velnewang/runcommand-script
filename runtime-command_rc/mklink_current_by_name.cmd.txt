@@ -1,0 +1,24 @@
+:: mklink _current by name
+@ECHO off
+CALL :find_dp0
+
+:config
+SET LINK_NAME=_current
+
+:start
+:: set and check
+SET LINK_PATH=%dp0%%LINK_NAME%\
+SET TARGET_PATH=%~dpn0
+IF EXIST %LINK_PATH% ( GOTO end )
+IF NOT EXIST %TARGET_PATH% ( GOTO end )
+
+:mklink_d
+mklink /d %LINK_PATH% %TARGET_PATH%
+GOTO end
+
+:end
+ECHO end
+
+:find_dp0
+SET dp0=%~dp0
+EXIT /b
