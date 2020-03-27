@@ -38,14 +38,14 @@ set LAUNCHER_ARGS=%PLUGIN_INI_ARGS% %APPEND_VM_ARGS% %JAVA_AGENT_ARGS%
 cd /d %ECLIPSE_INSTALL_DIR%
 start %LAUNCHER_BIN% %LAUNCHER_ARGS%
 
-:end
-echo --------end
-exit /b
-
 :log_info
 echo start %LAUNCHER_BIN% %LAUNCHER_ARGS%
 pause
 goto end
+
+:end
+echo --------end
+exit /b
 
 :find_dp0
 set dp0=%~dp0
