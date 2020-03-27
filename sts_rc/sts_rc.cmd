@@ -40,7 +40,6 @@ start %LAUNCHER_BIN% %LAUNCHER_ARGS%
 
 :log_info
 echo start %LAUNCHER_BIN% %LAUNCHER_ARGS%
-pause
 goto end
 
 :end
