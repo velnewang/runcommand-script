@@ -7,6 +7,9 @@ mysql
 git
 make gcc-core gcc-g++ gdb binutils
 
+#math
+bc
+
 # net
 curl
 nc nc6
