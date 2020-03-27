@@ -1,6 +1,6 @@
 :: firefox userdata by name
 
-SET FIREFOX_BIN="R:\runtime-static\firefox\_current\firefox.exe"
+SET FIREFOX_BIN="R:\runtime-app\firefox\_current\firefox.exe"
 SET FIREFOX_USERDATA=%~n0
 SET FIREFOX_ARGS=-no-remote -profile %FIREFOX_USERDATA%
 
