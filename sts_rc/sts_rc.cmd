@@ -5,15 +5,15 @@ call :find_dp0
 
 :start 
 echo --------start
-goto end
+:: goto end
 
 :config
 cd /d %dp0%
-set ECLIPSE_INSTALL_DIR=.\sts\_current\
+set ECLIPSE_INSTALL_DIR=R:\runtime-app\sts\_current\
 set PLUGIN_INI=%dp0%sts_plugin.ini
-set D_USER_HOME=.\userdata_sts\d_user_home\
+set D_USER_HOME=U:\userdata_sts\d_user_home\
 set D_INSTANCE_AREA=@user.home/d_osgi_instance_area/
-set LOMBOK_JAR=.\lombok\_current\lombok.jar
+set LOMBOK_JAR=R:\runtime-app\lombok\_current\lombok.jar
 
 :init_args
 set LAUNCHER_BIN=%ECLIPSE_INSTALL_DIR%SpringToolSuite4.exe
