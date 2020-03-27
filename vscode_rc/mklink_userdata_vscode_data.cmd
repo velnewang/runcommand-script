@@ -1,25 +1,30 @@
+:: mklink_userdata_vscode_data.cmd
 :: mklink userdata vscode data
-@ECHO off
-CALL :find_dp0
+@echo off
+call :find_dp0
+
+:start 
+echo --------start
+:: goto end
 
 :config
-SET LINK_PREFIX=R:\runtime-app\vscode\_current\
-SET TARGET_NAME=data
+set LINK_PREFIX=R:\runtime-app\vscode\_current\
+set TARGET_NAME=data
 
-:start
-:: set and check
-SET LINK_PATH=%LINK_PREFIX%data\
-SET TARGET_PATH=%dp0%%TARGET_NAME%\
-IF EXIST %LINK_PATH% ( GOTO end )
-IF NOT EXIST %TARGET_PATH% ( GOTO end )
+:init_args
+set LINK_PATH=%LINK_PREFIX%data\
+set TARGET_PATH=%dp0%%TARGET_NAME%\
+if exist %LINK_PATH% ( goto end )
+if not exist %TARGET_PATH% ( goto end )
 
-:mklink_d
+:run
 mklink /d %LINK_PATH% %TARGET_PATH%
-GOTO end
+goto end
 
 :end
-ECHO end
+echo --------end
+exit /b
 
 :find_dp0
-SET dp0=%~dp0
-EXIT /b
+set dp0=%~dp0
+exit /b
