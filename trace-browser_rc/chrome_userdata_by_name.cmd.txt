@@ -1,8 +1,8 @@
 :: chrome userdata by name
 
-SET CHROME_BIN="R:\runtime-app\chrome\_current\chrome.exe"
-SET CHROME_USERDATA=%~n0
-SET CHROME_ARGS=--check-for-update-interval=365days --disable-sync --no-default-browser-check --no-first-run --user-data-dir=%CHROME_USERDATA%
+set CHROME_BIN="R:\runtime-app\chrome\_current\chrome.exe"
+set CHROME_USERDATA=%~n0
+set CHROME_ARGS=--check-for-update-interval=365days --disable-sync --no-default-browser-check --no-first-run --user-data-dir=%CHROME_USERDATA%
 
-START "" %CHROME_BIN% %CHROME_ARGS%
-EXIT
+start "" %CHROME_BIN% %CHROME_ARGS%
+exit
