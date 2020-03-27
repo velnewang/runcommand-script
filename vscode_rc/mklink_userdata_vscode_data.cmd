@@ -9,11 +9,10 @@ echo --------start
 
 :config
 set LINK_PREFIX=R:\runtime-app\vscode\_current\
-set TARGET_NAME=data
+set TARGET_PATH=U:\userdata_vscode\data\
 
 :init_args
 set LINK_PATH=%LINK_PREFIX%data\
-set TARGET_PATH=%dp0%%TARGET_NAME%\
 if exist %LINK_PATH% ( goto end )
 if not exist %TARGET_PATH% ( goto end )
 
