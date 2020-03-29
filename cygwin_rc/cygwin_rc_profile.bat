@@ -1,7 +1,7 @@
 :: cygwin run commands profile
 @echo off
 
-SET APP_DIR=.\temp\static-program\cygwin_app\
+SET APP_DIR=.\temp\runtime-app\cygwin\
 SET SETUP_ARCH=x86_64
 SET SETUP_VERSION=2.900
 SET REPO_DIR=.\temp\static-repo\cygwin_repo\
