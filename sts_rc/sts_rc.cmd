@@ -14,6 +14,7 @@ set PLUGIN_INI=%dp0%sts_plugin.ini
 set D_USER_HOME=U:\userdata_sts\d_user_home\
 set D_INSTANCE_AREA=@user.home/d_osgi_instance_area/
 set LOMBOK_JAR=R:\runtime-app\lombok\_current\lombok.jar
+set D_JAVA_IO_TMPDIR=%D_USER_HOME%tmpdir\
 
 :init_args
 set LAUNCHER_BIN=%ECLIPSE_INSTALL_DIR%SpringToolSuite4.exe
@@ -28,13 +29,14 @@ set APPEND_VM_ARGS= ^
 -Dosgi.instance.area=%D_INSTANCE_AREA% ^
 -Dosgi.instance.area.default=@user.home/d_osgi_instance_area_default/ ^
 -Dfile.encoding=UTF-8 ^
--Djava.io.tmpdir=%D_USER_HOME%tmpdir\
+-Djava.io.tmpdir=%D_JAVA_IO_TMPDIR%
 set JAVA_AGENT_ARGS=-javaagent:%LOMBOK_JAR%
 :: set LAUNCHER_ARGS=%PLUGIN_INI_ARGS% %LAUNCHER_INI_ARGS% %APPEND_VM_ARGS% %JAVA_AGENT_ARGS%
 set LAUNCHER_ARGS=%PLUGIN_INI_ARGS% %APPEND_VM_ARGS% %JAVA_AGENT_ARGS%
 :: goto log_info
 
 :run
+mkdir %D_JAVA_IO_TMPDIR%
 cd /d %ECLIPSE_INSTALL_DIR%
 start %LAUNCHER_BIN% %LAUNCHER_ARGS%
 
