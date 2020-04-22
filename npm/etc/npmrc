@@ -1,0 +1,5 @@
+cache=S:\static-repo\node_cache
+init-module=R:\node\etc\npm-init.js
+registry=https://registry.npm.taobao.org
+update-notifier=false
+userconfig=R:\node\etc\_user_npmrc
