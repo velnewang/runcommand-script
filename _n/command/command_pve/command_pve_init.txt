@@ -1,0 +1,16 @@
+
+## Ignore LidSwitch
+
+# cat /etc/systemd/logind.conf | grep -v "#"
+	HandleLidSwitch=ignore
+# systemctl restart systemd-logind.service
+
+
+## Message-Box of Subscription
+
+# cat /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js | grep -n3 "No valid subscription"
+	458-                    .data.status.toLowerCase() !== 'active') {
+	459-                    return;
+	460-                    Ext.Msg.show({
+	461:                        title: gettext('No valid subscription'),
+

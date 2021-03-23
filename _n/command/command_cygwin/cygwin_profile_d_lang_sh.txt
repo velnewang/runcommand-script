@@ -1,0 +1,5 @@
+
+# ${_cygwin_dir}/root/etc/profile.d/lang.sh
+# test -z "${_LC_ALL_SET_:-${LC_CTYPE:-$LANG}}" && export LANG=$(/usr/bin/locale -uU)
+
+test -z "${_LC_ALL_SET_:-${LC_CTYPE:-$LANG}}" && export LANG='en_US.UTF-8'

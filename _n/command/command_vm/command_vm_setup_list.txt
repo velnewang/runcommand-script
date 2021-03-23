@@ -1,0 +1,25 @@
+# command vm setup list
+
+# dev
+git
+patch
+vim
+
+# dev_c
+make gcc-core gcc-g++ gdb binutils
+
+#math
+bc
+
+# net
+curl
+netcat
+nmap
+dnstuils
+traceroute
+
+# shells
+bash-completion
+
+# utils
+gnupg

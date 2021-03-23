@@ -1,0 +1,16 @@
+BoldAsFont=no
+Font=Source Code Pro
+FontChoice=CJK:2
+Font2=Source Han Code JP R
+FontHeight=12
+Charwidth=unicode
+PrintableControls
+Locale=en_US
+Charset=UTF-8
+FontSmoothing=full
+Transparency=high
+Language=en_US
+DeleteSendsDEL=no
+Scrollbar=right
+Columns=150
+Rows=20

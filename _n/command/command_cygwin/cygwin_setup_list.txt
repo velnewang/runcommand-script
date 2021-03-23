@@ -1,0 +1,23 @@
+# cygwin setup list
+
+# dev
+git
+patch
+
+# dev_c
+make gcc-core gcc-g++ gdb binutils
+
+#math
+bc
+
+# net
+curl
+nc nc6
+openssh
+wget
+
+# shells
+bash-completion
+
+# utils
+gnupg
